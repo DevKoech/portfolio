@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-     <footer className="bg-primary text-white py-4 text-center">
-      <p>&copy; {new Date().getFullYear()} [Your Name]. All rights reserved.</p>
+     <footer className="footer">
+      <p>&copy; {new Date().getFullYear()} Kiprono Koech. All rights reserved.</p>
     </footer>
   )
 }

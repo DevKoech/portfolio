@@ -9,20 +9,18 @@ const navItems = [
 
 function Navbar() {
   const location = useLocation();
-  
+
   return (
-    <nav className="bg-white shadow-md">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-primary">MyPortfolio</h1>
-        <ul className="flex gap-4 text-gray-700">
+    <nav className="navbar">
+      <div className="navbar-container">
+        <h1 className="navbar-title">MyPortfolio</h1>
+        <ul className="navbar-links">
           {navItems.map(({ path, label }) => (
             <li key={path}>
               <Link
                 to={path}
-                className={`${
-                  location.pathname === path
-                    ? 'text-primary font-semibold'
-                    : 'hover:text-primary'
+                className={`navbar-link${
+                  location.pathname === path ? ' active' : ''
                 }`}
                 aria-current={location.pathname === path ? 'page' : undefined}
               >

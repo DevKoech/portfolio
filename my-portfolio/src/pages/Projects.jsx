@@ -5,40 +5,59 @@ const Projects = () => {
     {
       title: "LightsOut",
       description: "Crowdsourced power availability tracker using MERN stack.",
-      tech: ["React", "Node.js", "MongoDB"],
+      tech: ["React", "Node.js", "Express", "MongoDB", "Google Maps API", "JWT"],
       github: "https://github.com/yourusername/lightsout",
-      demo: "https://lightsout-demo.vercel.app"
     },
     {
       title: "WhatsApp Clone",
       description: "Real-time chat app using Node.js, MongoDB, Pusher.",
-      tech: ["React", "Express", "Pusher"],
+      tech: ["React", "Node.js","Express", "MongoDb","Pusher"],
       github: "https://github.com/yourusername/whatsapp-clone",
-      demo: "https://whatsapp-clone.vercel.app"
-    }
-  ];
-return (
-     <section>
-      <h2 className="text-3xl font-bold mb-6 text-center text-primary">Projects</h2>
-      <div className="grid md:grid-cols-2 gap-6">
+    },
+    {
+      title: "Hospital Management System",
+      description: "A role-based RESTful system for managing patients, admissions, lab tests, billing, and staff using MySQL and Node.js.",
+      tech: ["React", "Node.js", "Express", "MySQL", "JWT", "RBAC"],
+      github: "https://github.com/yourusername/hospital-system",
+      demo: "",
+    },
+    {
+      title: "Online Art Gallery",
+      description: "A platform for artists to showcase their work with dynamic art valuation based on user interaction.",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Cloudinary", "JWT"],
+      github: "https://github.com/yourusername/art-gallery-app",
+      demo: "",
+    },
+    {
+      title: "Developer Portfolio",
+      description: "My personal portfolio site showcasing my skills, projects, and resume with a cool purplish UI aesthetic.",
+      tech: ["React", "Tailwind CSS", "Framer Motion"],
+      github: "https://github.com/yourusername/portfolio-site",
+      demo: "https://yourname.vercel.app",
+    },
+];
+
+  return (
+    <section className="animate-fade-in-up">
+      <h2 className="section-title gradient-text">Projects</h2>
+      <div className="projects-list">
         {projects.map((project, index) => (
-          <div key={index} className="bg-white shadow-lg p-6 rounded-2xl">
-            <h3 className="text-xl font-semibold text-primary">{project.title}</h3>
-            <p className="mt-2 mb-4 text-gray-700">{project.description}</p>
-            <div className="flex flex-wrap gap-2 text-sm text-white">
+          <div key={index} className="card">
+            <h3 className="project-title">{project.title}</h3>
+            <p className="project-desc">{project.description}</p>
+            <div className="project-tech">
               {project.tech.map((tech, i) => (
-                <span key={i} className="bg-accent px-2 py-1 rounded-md">{tech}</span>
+                <span key={i} className="skill-tag">{tech}</span>
               ))}
             </div>
-            <div className="mt-4 flex gap-4">
-              <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub</a>
-              <a href={project.demo} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Live Demo</a>
+            <div className="project-links">
+              <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn">GitHub</a>
             </div>
           </div>
         ))}
       </div>
     </section>
-);
+  );
 }
 
 export default Projects

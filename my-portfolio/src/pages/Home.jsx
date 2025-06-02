@@ -2,9 +2,9 @@ import React from 'react'
 
 const Home = () => {
    return (
-    <section className="text-center">
-      <h1 className="text-4xl font-bold text-primary">Hi, I'm [Your Name]</h1>
-      <p className="mt-4 text-lg">A Full Stack Developer passionate about building web applications.</p>
+    <section className="animate-fade-in-up">
+      <h1 className="section-title gradient-text">Hi, I'm Emmanuel Koech!</h1>
+      <p className="intro-text">A Full Stack Developer passionate about building web applications.</p>
     </section>
   );
 }

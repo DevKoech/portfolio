@@ -1,9 +1,183 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
 
 body {
   font-family: 'Inter', sans-serif;
+  background: #f9f9fc;
+  color: #22223b;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.08);
+  padding: 1rem 0;
+}
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar-link {
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar-link.active,
+.navbar-link:hover {
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Main Layout */
+.main-container {
+  min-height: 80vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  background: #f59e42;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.08);
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.btn:hover {
+  background: #1e3a8a;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  box-shadow: 0 4px 24px 0 rgba(30, 58, 138, 0.08);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 8px 32px 0 rgba(30, 58, 138, 0.16);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(90deg, #1e3a8a 0%, #f59e42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Skill Tags */
+.skill-tag {
+  background: #f59e42;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin: 0.25rem;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+/* Animation */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Text Sections */
+.intro-text, .about-text, .project-desc, .contact-text {
+  margin-top: 1rem;
+  color: #444;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Lists */
+.projects-list, .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Project Titles */
+.project-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+/* Project Technology */
+.project-tech {
+  margin: 1rem 0;
+}
+
+/* Project Links */
+.project-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Contact Links */
+.contact-link {
+  color: #1e3a8a;
+  text-decoration: underline;
 }
