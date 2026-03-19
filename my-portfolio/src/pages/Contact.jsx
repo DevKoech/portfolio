@@ -1,39 +1,75 @@
 import React from 'react';
 
 const Contact = () => {
-  return (
-    <section className="animate-fade-in-up">
-      <h2 className="section-title gradient-text">Contact Me</h2>
-      <p className="contact-text">
-        Reach out via email: <a href="mailto:manuelkoech2003@gmail.com" className="contact-link">manuelkoech2003@gmail.com</a>
-      </p>
-      <div className="contact-text" style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-        <a
-          href="https://github.com/manuelkoech"
-          className="contact-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
-        >
-          {/* GitHub SVG Icon */}
-          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.339-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.338 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .267.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/>
-          </svg>
-          GitHub
-        </a>
-        <a
-          href="https://linkedin.com/in/manuelkoech"
-          className="contact-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
-        >
-          {/* LinkedIn SVG Icon */}
-          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.844-1.563 3.042 0 3.604 2.003 3.604 4.605v5.591z"/>
-          </svg>
-          LinkedIn
-        </a>
+  const contactMethods = [
+    {
+      icon: (
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      ),
+      title: 'Email',
+      value: 'manuelkoech2003@gmail.com',
+      link: 'mailto:manuelkoech2003@gmail.com'
+    },
+    {
+      icon: (
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+      ),
+      title: 'GitHub',
+      value: 'manuelkoech',
+      link: 'https://github.com/manuelkoech'
+    },
+    {
+      icon: (
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      ),
+      title: 'LinkedIn',
+      value: 'manuelkoech',
+      link: 'https://linkedin.com/in/manuelkoech'
+    }
+  ];
+ return (
+    <section className="contact-section">
+      <div className="contact-header">
+        <h2 className="section-title gradient-text">Get In Touch</h2>
+        <p className="contact-intro">
+          I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.
+        </p>
+      </div>
+
+      <div className="contact-content">
+        <div className="contact-info-section">
+          <div className="contact-card">
+            <h3 className="contact-card-title">Contact Information</h3>
+            <p className="contact-card-copy">
+              Drop a message anytime via email or connect with me on GitHub / LinkedIn.
+            </p>
+            <div className="contact-methods">
+              {contactMethods.map((method, index) => (
+                <a
+                  key={index}
+                  href={method.link}
+                  className="contact-method"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="contact-method-icon">
+                    {method.icon}
+                  </div>
+                  <div className="contact-method-content">
+                    <h4 className="contact-method-title">{method.title}</h4>
+                    <p className="contact-method-value">{method.value}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
